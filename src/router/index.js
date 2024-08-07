@@ -11,7 +11,7 @@ import SignupPage from "@/pages/SignupPage.vue";
 import WishPopupPage from "@/pages/WishPopupPage.vue";
 import PostAllComponent from "@/components/community/post-all/PostAllComponent.vue";
 import PostCreateComponent from "@/components/community/post-edit/PostCreateComponent.vue";
-
+import CartComponent from "@/components/Cart/CartComponent.vue";
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -24,6 +24,7 @@ const router = createRouter({
             ],
             component: SignupPage , 
         },
+        { path: '/cart', component: CartComponent } ,
         { path: "/wish_popup", component: WishPopupPage },
         { path: "/popup_register", component: PopupRegisterComponent },
         { path: "/payment", component: PaymentPage },

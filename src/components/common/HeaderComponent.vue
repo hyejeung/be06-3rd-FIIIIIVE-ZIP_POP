@@ -126,6 +126,11 @@
                                     </a>
                                 </li>
                                 <li data-v-26153660="" class="nav-item right-section-item">
+                                    <a data-v-26153660="" href="/cart" class="gnb-link">
+                                        <span data-v-26153660="">장바구니</span>
+                                    </a>
+                                </li>
+                                <li data-v-26153660="" class="nav-item right-section-item">
                                     <a data-v-26153660="" href="/chats" class="gnb-link">
                                         <span data-v-26153660="">채팅</span>
                                     </a>
