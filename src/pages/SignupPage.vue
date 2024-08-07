@@ -1,5 +1,4 @@
 <template>
-    <!-- <SignupComponent></SignupComponent> -->
      <router-view></router-view>
 </template>
 
