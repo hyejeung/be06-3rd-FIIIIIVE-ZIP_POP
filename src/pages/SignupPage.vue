@@ -1,21 +1,12 @@
 <template>
-    <SignupComponent></SignupComponent>
+    <!-- <SignupComponent></SignupComponent> -->
+     <router-view></router-view>
 </template>
 
 <script>
-import SignupComponent from '@/components/signup/SignupComponent.vue';
 
 export default {
     name: "SignupPage",
-    data() {
-        return {
-        }
-    },
-    methods: {
-    },
-    components: {
-        SignupComponent,
-    },
 }
 </script>
 

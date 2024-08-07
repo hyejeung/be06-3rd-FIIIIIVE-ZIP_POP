@@ -1,34 +1,31 @@
 <template>
   <div id="app">
-    <component :is="headerComponent"></component>
+    <HeaderComponent :userStatus="userStatus"></HeaderComponent>
     <router-view></router-view>
     <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
-import { computed } from 'vue';
-import { useMemberStore } from './stores/useMemberStore';
-import HeaderComponent from './components/common/HeaderComponent.vue';
-import LoggedInHeaderComponent from './components/login/LoggedInHeaderComponent.vue';
 import FooterComponent from './components/common/FooterComponent.vue';
-
+import HeaderComponent from './components/common/HeaderComponent.vue';
+import { useMemberStore } from '@/stores/useMemberStore';
+import { mapStores } from 'pinia';
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    LoggedInHeaderComponent,
     FooterComponent,
   },
-  setup() {
-    const memberStore = useMemberStore();
-    const headerComponent = computed(() =>
-      memberStore.isLoggedIn ? 'LoggedInHeaderComponent' : 'HeaderComponent'
-    );
+  computed: {
+    ...mapStores(useMemberStore),
+    userStatus(){
+      return  this.memberStore.isLoggedIn;
+    }
+  },
+  mounted(){
+      console.log(this.memberStore.isLoggedIn)
 
-    return {
-      headerComponent,
-    };
   },
 };
 </script>

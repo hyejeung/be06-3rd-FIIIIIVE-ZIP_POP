@@ -5,9 +5,7 @@ const backend = "http://localhost:8080/api/v1/member";
 // 전역 저장소 생성
 export const useMemberStore = defineStore("member", {
     state: () => ({ isLoggedIn: false }),
-    persist: {
-        storage: sessionStorage,
-    },
+    persist: { storage: sessionStorage, },
     actions: {
         async login(member) {
             let response = await axios.post(backend + "/login", member);
@@ -18,8 +16,6 @@ export const useMemberStore = defineStore("member", {
                 return false;
             }
         },
-        logout() {
-            this.isLoggedIn = false;
-        },
+        logout() { this.isLoggedIn = false; },
     },
 });
