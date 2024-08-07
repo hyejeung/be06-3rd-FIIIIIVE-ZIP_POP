@@ -88,9 +88,9 @@
                                     </a>
                                 </li>
                                 <li data-v-26153660="" class="nav-item left-section-item">
-                                    <a data-v-26153660="" href="/community/soomgo-life/?from=web_gnb" class="gnb-link">
-                                        <span data-v-26153660="">커뮤니티</span>
-                                    </a>
+                                    <span data-v-26153660=""  class="gnb-link">
+                                        <router-link to="/community/post-all" data-v-26153660=""> 커뮤니티</router-link>
+                                    </span>
                                 </li>
                             </ul>
                         </nav>

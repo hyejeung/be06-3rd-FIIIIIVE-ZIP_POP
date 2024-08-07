@@ -3,8 +3,10 @@ import App from './App.vue';
 import router from './router';
 import { createPinia } from 'pinia'
 import piniaPersistedstate from 'pinia-plugin-persistedstate';
-
-
+import "./assets/css/125.18f53a9f58282d65b021.css"
+import "./assets/css/531.18f53a9f58282d65b021.css"
+import "./assets/css/536.18f53a9f58282d65b021.css"
+import "./assets/css/130.18f53a9f58282d65b021.css"
 import "./assets/css/0.2a30846d2fb29e246941.css";
 import "./assets/css/3.2a30846d2fb29e246941.css";
 import "./assets/css/4.2a30846d2fb29e246941.css";

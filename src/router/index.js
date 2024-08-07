@@ -9,13 +9,15 @@ import LoginPage from "@/pages/LoginPage.vue";
 import PaymentPage from "@/pages/PaymentPage.vue";
 import SignupPage from "@/pages/SignupPage.vue";
 import WishPopupPage from "@/pages/WishPopupPage.vue";
+import PostAllComponent from "@/components/community/post-all/PostAllComponent.vue";
+import PostCreateComponent from "@/components/community/post-edit/PostCreateComponent.vue";
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: "/", component: MainComponent },
         { path: "/login", component: LoginPage },
-        { path: "/signup", 
+        {   path: "/signup", 
             children: [
                 { path: "customer", component: CustomerSignupComponent },
                 { path: "company", component: CompanySignupComponent },
@@ -25,7 +27,17 @@ const router = createRouter({
         { path: "/wish_popup", component: WishPopupPage },
         { path: "/popup_register", component: PopupRegisterComponent },
         { path: "/payment", component: PaymentPage },
-        { path: "/community", component: CommunityPage}
+        {   path: "/community", 
+            children: [
+                {path: "post-all", component: PostAllComponent },
+                {path: "post-edit",
+                    children: [
+                        {path: "create", component: PostCreateComponent},
+                        {path: "update/:postIdx", component: CustomerSignupComponent}
+                    ],
+                }
+            ],
+            component: CommunityPage}
     ],
 });
 

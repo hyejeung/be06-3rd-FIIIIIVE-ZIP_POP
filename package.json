@@ -16,7 +16,6 @@
     "jest-unit": "^0.0.2",
     "pinia": "^2.2.0",
     "pinia-plugin-persistedstate": "^3.2.1",
-    "selenium-webdriver": "^4.23.0",
     "vee-validate": "^4.13.2",
     "vue": "^3.2.13",
     "vue-router": "^4.4.1",
