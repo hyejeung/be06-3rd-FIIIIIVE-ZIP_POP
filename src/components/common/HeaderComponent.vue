@@ -129,10 +129,15 @@
             <nav data-v-26153660="">
               <ul data-v-26153660="" class="nav-list">
                 <li data-v-26153660="" class="nav-item right-section-item">
-                  <a data-v-26153660="" href="/requests/sent" class="gnb-link">
+                  <a @click="redirectToMypage" class="gnb-link">
                     <span data-v-26153660="">마이페이지</span>
                   </a>
                 </li>
+                <li data-v-26153660="" class="nav-item right-section-item">
+                                    <a data-v-26153660="" href="/cart" class="gnb-link">
+                                        <span data-v-26153660="">장바구니</span>
+                                    </a>
+                                </li>
                 <li data-v-26153660="" class="nav-item right-section-item">
                   <a data-v-26153660="" href="/wish_popup" class="gnb-link">
                     <span data-v-26153660="">찜한팝업</span>
@@ -141,16 +146,6 @@
                 <li data-v-26153660="" class="nav-item right-section-item">
                   <a data-v-26153660="" href="/chats" class="gnb-link">
                     <span data-v-26153660="">채팅</span>
-                  </a>
-                </li>
-                <li data-v-26153660="" class="nav-item right-section-item">
-                  <a data-v-26153660="" href="/popup_register" class="gnb-link">
-                    <span data-v-26153660="">팝업등록</span>
-                  </a>
-                </li>
-                <li data-v-26153660="" class="nav-item right-section-item">
-                  <a data-v-26153660="" href="/product_register" class="gnb-link">
-                    <span data-v-26153660="">굿즈등록</span>
                   </a>
                 </li>
                 <button v-if="userStatus" @click="handleLogout" data-v-26153660="" type="button"
@@ -180,9 +175,11 @@
   <div id="app-sticky-nav" class="vue-portal-target"></div>
 </template>
 
+
 <script>
 import { useMemberStore } from '@/stores/useMemberStore'; // Adjust the import path
 import { mapStores } from 'pinia';
+
 export default {
   name: "HeaderComponent",
   props: ["userStatus"],
@@ -195,16 +192,35 @@ export default {
         console.log("Sending logout request...");
         if (await this.memberStore.logout()) {
           console.log("Logout successful, redirecting...");
-
           this.$router.push('/')
-
         }
       } catch (error) {
         console.error("Logout error:", error);
+      }
+    },
+    getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    },
+    redirectToMypage() {
+      const utoken = this.getCookie('UTOKEN');
+      if (utoken) {
+        const userRole = utoken.split('|')[1];
+        if (userRole === 'ROLE_COMPANY') {
+          this.$router.push('/managermypage');
+        } else if (userRole === 'ROLE_CUSTOMER') {
+          this.$router.push('/mypage');
+        } else {
+          this.$router.push('/mypage'); // Default fallback if role is not matched
+        }
+      } else {
+        this.$router.push('/mypage'); // Default fallback if token is not found
       }
     }
   }
 }
 </script>
+
 
 <style scoped></style>
