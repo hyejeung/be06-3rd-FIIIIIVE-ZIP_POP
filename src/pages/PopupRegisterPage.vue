@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import PopupRegisterComponent from '@/components/mypage/PopupRegisterComponent.vue';
+import PopupRegisterComponent from '@/components/companymypage/PopupRegisterComponent.vue';
 
 export default {
   name: "PopupRegisterPage",
