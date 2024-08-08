@@ -5,7 +5,6 @@ import { createPinia } from "pinia";
 import piniaPersistedstate from "pinia-plugin-persistedstate";
 
 import "./assets/css/main.css";
-import "./assets/css/385.18f53a9f58282d65b021.css";
 
 const pinia = createPinia();
 pinia.use(piniaPersistedstate);

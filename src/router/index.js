@@ -12,7 +12,7 @@ import ProductRegisterPage from "@/pages/ProductRegisterPage.vue";
 import PostAllComponent from "@/components/community/post-all/PostAllComponent.vue";
 import PostCreateComponent from "@/components/community/post-edit/PostCreateComponent.vue";
 import CartComponent from "@/components/Cart/CartComponent.vue";
-import CustomerMypage from "@/pages/CustomerMypage.vue";
+import WishPopupPage from "@/pages/WishPopupPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,22 +27,28 @@ const router = createRouter({
       ],
       component: SignupPage,
     },
-    { path: '/cart', component: CartComponent } ,
-    { path: "/wish_popup", component: CustomerMypage },
+    { path: '/cart', component: CartComponent },
     { path: "/popup_register", component: PopupRegisterPage },
     { path: "/product_register", component: ProductRegisterPage },
     { path: "/payment", component: PaymentPage },
-    {   path: "/community", 
-            children: [
-                {path: "post-all", component: PostAllComponent },
-                {path: "post-edit",
-                    children: [
-                        {path: "create", component: PostCreateComponent},
-                        {path: "update/:postIdx", component: CustomerSignupComponent}
-                    ],
-                }
-            ],
-            component: CommunityPage}  ],
+    {
+      path: "/community",
+      children: [
+        { path: "post-all", component: PostAllComponent },
+        {
+          path: "post-edit",
+          children: [
+            { path: "create", component: PostCreateComponent },
+            { path: "update/:postIdx", component: CustomerSignupComponent }
+          ],
+        }
+      ],
+      component: CommunityPage
+    },
+    {
+      path: "/wish_popup",
+      component: WishPopupPage
+    }],
 });
 
 export default router;
