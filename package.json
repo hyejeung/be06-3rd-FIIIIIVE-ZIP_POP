@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@stomp/stompjs": "^7.0.0",
     "axios": "^1.7.3",
     "core-js": "^3.8.3",
     "i": "^0.3.7",
@@ -18,6 +19,7 @@
     "node-module": "^1.0.1",
     "pinia": "^2.2.0",
     "pinia-plugin-persistedstate": "^3.2.1",
+    "sockjs-client": "^1.6.1",
     "vee-validate": "^4.13.2",
     "vue": "^3.2.13",
     "vue-router": "^4.4.1",

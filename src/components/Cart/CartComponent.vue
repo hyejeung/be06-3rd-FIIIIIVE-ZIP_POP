@@ -258,9 +258,11 @@ export default {
 <style scoped>
 
 body {
+
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 50px;
+ padding: 100px;
+ 
   background-color: #f8f8f8;
 }
 #app-body {
