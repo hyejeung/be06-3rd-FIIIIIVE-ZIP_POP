@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-const backend = "http://localhost:8080/api/v1/member";
+const backend = "/api/api/v1/member";
 // 전역 저장소 생성
 export const useMemberStore = defineStore("member", {
     state: () => ({ isLoggedIn: false }),
@@ -16,6 +16,15 @@ export const useMemberStore = defineStore("member", {
                 return false;
             }
         },
-        logout() { this.isLoggedIn = false; },
+        async logout() {
+            let response = await axios.post(backend + '/logout');
+            console.log(response);
+            if (response.status === 200) {
+                this.isLoggedIn = false;
+                return true;
+            } else {
+                return false;
+            }
+        },
     },
 });

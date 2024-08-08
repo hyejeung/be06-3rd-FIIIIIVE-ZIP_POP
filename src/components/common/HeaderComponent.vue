@@ -134,6 +134,11 @@
                   </a>
                 </li>
                 <li data-v-26153660="" class="nav-item right-section-item">
+                  <a data-v-26153660="" href="/wish_popup" class="gnb-link">
+                    <span data-v-26153660="">찜한팝업</span>
+                  </a>
+                </li>
+                <li data-v-26153660="" class="nav-item right-section-item">
                   <a data-v-26153660="" href="/chats" class="gnb-link">
                     <span data-v-26153660="">채팅</span>
                   </a>
@@ -148,21 +153,12 @@
                     <span data-v-26153660="">굿즈등록</span>
                   </a>
                 </li>
+                <button v-if="userStatus" @click="handleLogout" data-v-26153660="" type="button"
+                  class="btn pro-signup-btn right-section-item btn-primary">
+                  로그아웃
+                </button>
               </ul>
             </nav>
-            <div data-v-4c66cf88="" data-v-26153660=""
-              class="notification-counter notification-counter right-section-item">
-              <button data-v-4c66cf88="" type="button" class="btn btn-clear btn-none">
-                <span data-v-0d243f1a="" data-v-4c66cf88="" class="sg-icon-v1 alarm fill"
-                  style="width: 1.5rem; height: 1.5rem; --svg-color: #323232;">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M12.001 2.06079L11.999 2.06079C9.97499 2.06349 8.05941 2.98877 6.66424 4.5908C5.27192 6.18956 4.50296 8.33834 4.50071 10.5608V14.4899C4.50071 14.5503 4.47888 14.6086 4.43924 14.6541L3.4303 15.8127C3.15284 16.1313 3 16.5395 3 16.962V17.3108C3 18.2773 3.7835 19.0608 4.75 19.0608H8.32868C8.47595 19.7683 8.82956 20.423 9.35253 20.9399C10.0562 21.6354 11.0087 22.0245 12.0001 22.0245C12.9915 22.0245 13.944 21.6354 14.6477 20.9399C15.1707 20.423 15.5243 19.7683 15.6715 19.0608H19.25C20.2165 19.0608 21 18.2773 21 17.3108V16.962C21 16.5395 20.8472 16.1313 20.5697 15.8127L19.5608 14.6541C19.5211 14.6086 19.4993 14.5503 19.4993 14.4899V10.56C19.497 8.33758 18.7281 6.18956 17.3358 4.5908C15.9406 2.98877 14.025 2.06349 12.001 2.06079ZM14.1158 19.0608H9.88446C9.99491 19.3628 10.1719 19.6407 10.407 19.873C10.828 20.2892 11.4009 20.5245 12.0001 20.5245C12.5993 20.5245 13.1722 20.2892 13.5933 19.873C13.8283 19.6407 14.0053 19.3628 14.1158 19.0608ZM7.79542 5.57591C8.93058 4.27244 10.4456 3.56317 12 3.56079C13.5544 3.56317 15.0694 4.27244 16.2046 5.57591C17.3428 6.88293 17.9974 8.67461 17.9993 10.5616V14.4899C17.9993 14.9124 18.1521 15.3206 18.4296 15.6392L19.4385 16.7978C19.4782 16.8433 19.5 16.9016 19.5 16.962V17.3108C19.5 17.4489 19.3881 17.5608 19.25 17.5608H4.75C4.61193 17.5608 4.5 17.4489 4.5 17.3108V16.962C4.5 16.9016 4.52183 16.8433 4.56147 16.7978L5.57042 15.6392C5.84788 15.3206 6.00071 14.9124 6.00071 14.4899V10.5611C6.00273 8.67432 6.65726 6.88282 7.79542 5.57591Z"
-                      fill="black"></path>
-                  </svg>
-                </span>
-              </button>
-            </div>
             <div data-v-35a09b99="" data-v-26153660="" class="usermenu user-menu right-section-item">
               <div data-v-35a09b99="" class="usermenu-button">
                 <div data-v-29d5164e="" data-v-35a09b99="" class="user-profile-picture">
@@ -175,30 +171,6 @@
                 <img data-v-35a09b99=""
                   src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgxMnYxMkgweiIvPgogICAgICAgIDxwYXRoIHN0cm9rZT0iIzg4OCIgc3Ryb2tlLXdpZHRoPSIxLjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTEwIDQgNiA4IDIgNCIvPgogICAgPC9nPgo8L3N2Zz4K">
               </div>
-              <div data-v-35a09b99="" class="usermenu-dropdown" style="display: none;">
-                <div data-v-35a09b99="" data-name="user-info">
-                  <h4 data-v-35a09b99="" data-name="name">송나경 고객님</h4>
-                </div>
-                <ul data-v-35a09b99="" data-name="usermenu-control">
-                  <li data-v-35a09b99="" class="row" style="display: none;">
-                    <div data-v-35a09b99="" class="col">프로필 관리</div>
-                  </li>
-                  <li data-v-35a09b99="" class="row">
-                    <div data-v-35a09b99="" class="col">받은 견적</div>
-                  </li>
-                  <li data-v-35a09b99="" class="row">
-                    <div data-v-35a09b99="" class="col">마이페이지</div>
-                  </li>
-                </ul>
-                <div data-v-35a09b99="" data-name="user-type-control">
-                  <button data-v-35a09b99="" type="button" class="btn btn-secondary btn-sm">
-                    <img data-v-35a09b99=""
-                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMyIgaGVpZ2h0PSIxMSI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2U9IiMzMjMyMzIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjIiPjxwYXRoIGQ9Ik0xMiAxLjV2M0g5bS04IDV2LTNoMyIvPjxwYXRoIGQ9Ik0yLjI1NSA0QTQuNSA0LjUgMCAwIDEgOS42OCAyLjMyTDEyIDQuNW0tMTEgMmwyLjMyIDIuMThBNC41IDQuNSAwIDAgMCAxMC43NDUgNyIvPjwvZz48L3N2Zz4=">고수전환
-                  </button>
-                </div>
-                <div data-v-35a09b99="" class="logout"><button data-v-35a09b99="" type="button"
-                    class="btn btn-secondary btn-sm">로그아웃</button></div>
-              </div>
             </div>
           </div>
         </div>
@@ -209,9 +181,29 @@
 </template>
 
 <script>
+import { useMemberStore } from '@/stores/useMemberStore'; // Adjust the import path
+import { mapStores } from 'pinia';
 export default {
   name: "HeaderComponent",
-  props: ["userStatus"]
+  props: ["userStatus"],
+  computed: {
+    ...mapStores(useMemberStore)
+  },
+  methods: {
+    async handleLogout() {
+      try {
+        console.log("Sending logout request...");
+        if (await this.memberStore.logout()) {
+          console.log("Logout successful, redirecting...");
+
+          this.$router.push('/')
+
+        }
+      } catch (error) {
+        console.error("Logout error:", error);
+      }
+    }
+  }
 }
 </script>
 
