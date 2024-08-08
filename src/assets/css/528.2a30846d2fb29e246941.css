@@ -944,7 +944,7 @@ input[type="checkbox"] + label[data-v-dadb4496] {
   font-size: 1rem;
 }
 .form-control.is-invalid[data-v-74c08a55] {
-  border-color: #fa5963;
+  border-color: #000;
 }
 .input-wrap[data-v-74c08a55] {
   position: relative;
