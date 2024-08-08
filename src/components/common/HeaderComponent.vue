@@ -143,6 +143,11 @@
                     <span data-v-26153660="">팝업등록</span>
                   </a>
                 </li>
+                <li data-v-26153660="" class="nav-item right-section-item">
+                  <a data-v-26153660="" href="/product_register" class="gnb-link">
+                    <span data-v-26153660="">굿즈등록</span>
+                  </a>
+                </li>
               </ul>
             </nav>
             <div data-v-4c66cf88="" data-v-26153660=""

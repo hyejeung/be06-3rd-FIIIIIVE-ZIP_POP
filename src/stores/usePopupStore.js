@@ -6,7 +6,7 @@ axios.defaults.withCredentials = true;
 const backend = "http://localhost:8080/api/v1/popup-store";
 // 전역 저장소 생성
 export const usePopupStore = defineStore("popupstore", {
-  state: () => ({ isLoggedIn: false }),
+  state: () => ({ isLoggedIn: false, dataList: [] }),
   persist: {
     storage: sessionStorage,
   },
@@ -24,6 +24,20 @@ export const usePopupStore = defineStore("popupstore", {
           { withCredentials: true }
         );
         console.log(response);
+      } catch (error) {
+        console.error("Error", error);
+        return false;
+      }
+    },
+    async searchAll() {
+      try {
+        let response = await axios.get(backend + "/search-all?page=0&size=10");
+        if (response.status === 200) {
+          this.dataList = response.data.result;
+          console.log(this.dataList);
+        } else {
+          return false;
+        }
       } catch (error) {
         console.error("Error", error);
         return false;
