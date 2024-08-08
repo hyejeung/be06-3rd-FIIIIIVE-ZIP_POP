@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import ProductRegisterComponent from '@/components/mypage/ProductRegisterComponent.vue';
+import ProductRegisterComponent from '@/components/companymypage/ProductRegisterComponent.vue';
 
 export default {
   name: "ProductRegisterPage",
