@@ -1,8 +1,8 @@
 import { defineStore } from "pinia";
 import axios from "axios";
+import { backend } from "@/const";
 
 axios.defaults.withCredentials = true;
-const backend = "http://localhost:8080/api/v1/post";
 // 전역 저장소 생성
 export const usePostStore = defineStore("post", {
     state: () => ({

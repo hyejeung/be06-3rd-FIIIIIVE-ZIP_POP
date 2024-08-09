@@ -1,99 +1,53 @@
 <template>
     <div id="app-body">
         <div data-testid="login-page" class="login-page" data-v-ac2db00e="">
-            <h2 data-v-ac2db00e="">로그인</h2>
+            <h2 data-v-ac2db00e="">ZIPPOP 로그인</h2>
             <div data-v-ac2db00e="" class="card">
                 <form data-v-b7b1ce04="" data-v-ac2db00e="" @submit.prevent="login" autocomplete="off" class="">
                     <div data-v-b7b1ce04="" class="form-row login-form">
                         <div data-v-b7b1ce04="" class="col-12">
                             <fieldset data-v-b7b1ce04="" class="form-group" id="__BVID__74">
-                                <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0"
-                                    id="__BVID__74__BV_label_">
-                                    이메일
-                                </legend>
+                                <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__74__BV_label_"> 이메일 </legend>
                                 <div>
-                                    <input data-v-b7b1ce04="" v-model="member.email" name="email" type="email"
-                                        placeholder="example@soomgo.com" autocomplete="off"
-                                        class="text-input form-control is-valid" data-testid="login-email"
-                                        x-autocompletetype="off" autocorrect="off" spellcheck="false"
-                                        autocapitalize="off" data-vv-validate-on="blur" id="__BVID__75"
-                                        data-gtm-form-interact-field-id="0" aria-required="true" aria-invalid="false" />
+                                    <input data-v-b7b1ce04="" v-model="member.email" name="email" type="email" placeholder="example@soomgo.com" autocomplete="off" class="text-input form-control is-valid" data-testid="login-email" x-autocompletetype="off" autocorrect="off" spellcheck="false" autocapitalize="off" data-vv-validate-on="blur" id="__BVID__75" data-gtm-form-interact-field-id="0" aria-required="true" aria-invalid="false" />
                                     <div data-v-b7b1ce04="" class="invalid-feedback"></div>
-                                    <!---->
-                                    <!---->
-                                    <!---->
                                 </div>
                             </fieldset>
                         </div>
                         <div data-v-b7b1ce04="" class="col-12">
                             <fieldset data-v-b7b1ce04="" class="form-group password" id="__BVID__76">
-                                <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0"
-                                    id="__BVID__76__BV_label_">
-                                    비밀번호
-                                </legend>
+                                <legend tabindex="-1" class="bv-no-focus-ring col-form-label pt-0" id="__BVID__76__BV_label_"> 비밀번호 </legend>
                                 <div>
-                                    <input v-model="member.password" data-v-b7b1ce04="" name="password" type="password"
-                                        placeholder="비밀번호를 입력해 주세요." autocomplete="off"
-                                        class="text-input form-control is-valid" data-testid="login-password"
-                                        x-autocompletetype="off" autocorrect="off" spellcheck="false"
-                                        autocapitalize="off" data-vv-validate-on="blur" aria-invalid="true"
-                                        id="__BVID__77" aria-required="true" />
-                                    <!---->
-                                    <!---->
-                                    <!---->
-                                    <!---->
+                                    <input v-model="member.password" data-v-b7b1ce04="" name="password" type="password" placeholder="비밀번호를 입력해 주세요." autocomplete="off" class="text-input form-control is-valid" data-testid="login-password" x-autocompletetype="off" autocorrect="off" spellcheck="false" autocapitalize="off" data-vv-validate-on="blur" aria-invalid="true" id="__BVID__77" aria-required="true" />
                                 </div>
                             </fieldset>
                         </div>
                         <div data-v-b7b1ce04="" class="col-12">
-                            <button data-v-b7b1ce04="" data-testid="btn-login" type="submit"
-                                class="btn btn-login btn-primary">
+                            <button data-v-b7b1ce04="" data-testid="btn-login" type="submit" class="btn btn-login btn-primary">
                                 <span data-v-b7b1ce04="">이메일 로그인</span>
                                 <span data-v-b7b1ce04="" style="display: none">
                                     <div data-v-fc3fcce8="" data-v-b7b1ce04="" class="">
-                                        <div data-v-fc3fcce8="" class="indicator-body" style="
-                        width: 24px;
-                        height: 24px;
-                        border-width: 0.25rem;
-                        border-style: solid;
-                        border-color: rgb(255, 255, 255) rgba(255, 255, 255, 0.2)
-                        rgba(255, 255, 255, 0.2);
-                        border-image: initial;
-                    "></div>
+                                        <div data-v-fc3fcce8="" class="indicator-body email_login_btn"></div>
                                         <p data-v-fc3fcce8="" style="display: none"></p>
                                     </div>
                                 </span>
                             </button>
                         </div>
-                        <div data-v-b7b1ce04="" class="reset-password-or-signup-wrapper col-12">
-                            <div data-v-b7b1ce04="">
-                                <a data-v-b7b1ce04="" href="/find-email?from=start_sign-in" class="">이메일 찾기</a>
-                                <div data-v-b7b1ce04="" class="line"></div><a data-v-b7b1ce04="" href="/find-password/"
-                                    class="">비밀번호 찾기</a>
-                                <div data-v-b7b1ce04="" class="line"></div><a data-v-b7b1ce04=""
-                                    href="/sign-up?from=loginpage" class="">회원가입</a>
-                            </div>
-                        </div>
-                        <div data-v-b7b1ce04="" class="col">
-                            <div data-v-a5692ec4="" data-v-b7b1ce04="" class="recent-login">
-                                이전에 <span class="text-primary">이메일</span>로 로그인했어요
-                            </div>
-                        </div>
-
                         <div data-v-b7b1ce04="" class="col-12">
-                            <button data-v-3998184b="" data-v-b7b1ce04="" type="button"
-                                class="btn kakao-login-btn btn-secondary">
-                                <img data-v-3998184b=""
-                                    src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg"
-                                    alt="카카오 로그인" /><span data-v-3998184b="">카카오로 시작</span>
-                            </button>
+                            <a href="/signup/customer" data-v-b7b1ce04="" data-testid="btn-login" class="btn btn-login btn-primary">
+                                <span data-v-b7b1ce04="">회원가입</span>
+                                <span data-v-b7b1ce04="" style="display: none">
+                                    <div data-v-fc3fcce8="" data-v-b7b1ce04="" class="">
+                                        <div data-v-fc3fcce8="" class="indicator-body email_login_btn"></div>
+                                        <p data-v-fc3fcce8="" style="display: none"></p>
+                                    </div>
+                                </span>
+                            </a>
                         </div>
                         <div data-v-b7b1ce04="" class="col-12">
-                            <button data-v-d2f0a4f0="" data-v-b7b1ce04="" type="button"
-                                class="btn naver-id-login btn-secondary">
-                                <img data-v-d2f0a4f0=""
-                                    src="https://assets.cdn.soomgo.com/icons/icon-login-naver-btn.svg" /><span
-                                    data-v-d2f0a4f0=""> 네이버로 시작 </span>
+                            <button data-v-3998184b="" data-v-b7b1ce04="" type="button" class="btn kakao-login-btn btn-secondary">
+                                <img data-v-3998184b="" src="https://assets.cdn.soomgo.com/icons/icon-login-kakaotalk-btn.svg" alt="카카오 로그인" />
+                                    <span data-v-3998184b="">카카오로 시작</span>
                             </button>
                         </div>
                     </div>
@@ -111,24 +65,34 @@ import { useMemberStore } from '@/stores/useMemberStore';
 export default {
     name: "LoginComponent",
     data() {
-        return { member: { email: null, password: null } };
+        return { 
+            member: { 
+                email: null, 
+                password: null 
+            } 
+        };
     },
-    computed: {
-        ...mapStores(useMemberStore)
-    },
+    computed: { ...mapStores(useMemberStore) },
     methods: {
         login() {
             const result = this.memberStore.login(this.member);
-            if (result) {
-                // window.location.href = "/";
-                this.$router.push("/")
-            }
+            if (result) { this.$router.push("/") }
         }
     }
 }
 </script>
 
 <style scoped>
+
+.email_login_btn{
+    width: 24px;
+    height: 24px;
+    border-width: 0.25rem;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgba(255, 255, 255, 0.2)
+    rgba(255, 255, 255, 0.2);
+    border-image: initial;
+}
 #app {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -310,7 +274,6 @@ export default {
 }
 
 .login-form .btn.kakao-login-btn[data-v-b7b1ce04] {
-    margin-top: 1rem
 }
 
 .login-form .btn.fb-login-btn[data-v-b7b1ce04] {

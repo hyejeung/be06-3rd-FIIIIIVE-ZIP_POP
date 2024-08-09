@@ -2,52 +2,53 @@
     <main class="css-rqsb1k eqpswao0">
         <div class="css-decb2f e1m10pgf0">
             <div class="e49cm070 css-y65al5">
-                <h1 class="css-2nruhc e49cm071">ZIPPOP에 오신 것을 환영합니다</h1>
+                <h1 class="css-2nruhc e49cm071">ZIPPOP 회원가입</h1>
                 <form @submit.prevent="handleSignup" autocomplete="off" class="css-ms5z5x e11vcsx40">
-                    <div>
-                        <div class="css-0">
-                            <label for="name" class="css-g3x1x2 et8ys2u0">이름</label>
-                            <div class="css-hyxlzm et8ys2u1">
-                                <input autofocus="" id="name" class="css-sn3hoi et8ys2u2" placeholder="이름(실명)을 입력해주세요"
-                                    maxlength="7" name="name" type="text" v-model="name">
-                            </div>
-                        </div>
-                        <div class="e1gu70o50 css-sc8ysd">
-                            <div class="css-gc5ngv e1gu70o51">
-                                <div class="css-17jw9e6 e1gu70o54">타인 명의로 가입 시 계정이 정지되고 재가입이 불가능합니다.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="css-0">
-                        <label for="phone_number" class="css-g3x1x2 et8ys2u0">휴대폰 번호</label>
-                        <div class="css-hyxlzm et8ys2u1">
-                            <input id="phone_number" class="css-sn3hoi et8ys2u2" placeholder="010-1234-5678"
-                                maxlength="13" name="phone_number" v-model="phone_number">
-                        </div>
-                    </div>
-                    <div class="css-0">
-                        <label for="address" class="css-g3x1x2 et8ys2u0">주소</label>
-                        <div class="css-hyxlzm et8ys2u1">
-                            <input id="address" class="css-sn3hoi et8ys2u2" placeholder="주소를 입력해주세요" maxlength="100"
-                                name="address" v-model="address">
-                        </div>
-                    </div>
+                    <!-- 이메일 -->
                     <div class="css-0">
                         <label for="email" class="css-g3x1x2 et8ys2u0">이메일</label>
                         <div class="css-hyxlzm et8ys2u1">
-                            <input id="email" class="css-sn3hoi et8ys2u2" placeholder="example@zippop.com"
-                                maxlength="30" name="email" v-model="email">
+                            <input v-model="member.email" id="email" class="css-sn3hoi et8ys2u2" placeholder="example@zippop.com" maxlength="30" name="email" >
                         </div>
                     </div>
+                    <!-- 비밀번호 -->
                     <div class="css-0">
                         <label for="password" class="css-g3x1x2 et8ys2u0">비밀번호</label>
                         <div class="css-hyxlzm et8ys2u1">
-                            <input id="password" class="css-sn3hoi et8ys2u2" placeholder="비밀번호를 입력해주세요" name="password"
-                                type="password" v-model="password">
+                            <input v-model="member.password" id="password" class="css-sn3hoi et8ys2u2" placeholder="비밀번호를 입력해주세요" name="password" type="password" >
                         </div>
                     </div>
+                    <!-- 이름 -->
+                    <div class="css-0">
+                        <label for="name" class="css-g3x1x2 et8ys2u0">회원 이름</label>
+                        <div class="css-hyxlzm et8ys2u1">
+                            <input  v-model="member.name" autofocus="" id="name" class="css-sn3hoi et8ys2u2" placeholder="이름(실명)을 입력해주세요" maxlength="7" name="name" type="text">
+                        </div>
+                    </div>
+                    <!-- 휴대폰 번호 -->
+                    <div class="css-0">
+                        <label for="phone_number" class="css-g3x1x2 et8ys2u0">휴대폰 번호</label>
+                        <div class="css-hyxlzm et8ys2u1">
+                            <input v-model="member.phone_number" id="phone_number" class="css-sn3hoi et8ys2u2" placeholder="010-1234-5678" maxlength="13" name="phone_number" >
+                        </div>
+                    </div>
+                    <!-- 주소 -->
+                    <div class="css-0">
+                        <label for="address" class="css-g3x1x2 et8ys2u0">주소</label>
+                        <div class="css-hyxlzm et8ys2u1">
+                            <input v-model="member.address" id="address" class="css-sn3hoi et8ys2u2" placeholder="주소를 입력해주세요" maxlength="100" name="address" >
+                        </div>
+                    </div>
+                        
+                    <!-- 회원가입 버튼 -->
                     <div class="css-yc1buc">
                         <button type="submit" class="css-1r1fbe7">회원가입</button>
+                    </div>
+                    <!-- info -->
+                    <div class="e1gu70o50 css-sc8ysd">
+                        <div class="css-gc5ngv e1gu70o51">
+                            <div class="css-17jw9e6 e1gu70o54">타인 명의로 가입 시 계정이 정지되고 재가입이 불가능합니다.</div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -56,41 +57,28 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { mapStores } from 'pinia'
+import { useMemberStore } from '@/stores/useMemberStore';
 
 export default {
-    name: "SignupComponent",
+    name: "CustomerSignupComponent",
     data() {
-        return {
-            role: 'ROLE_USER',
-            name: '',       // 이름
-            email: '',      // 이메일
-            password: '',   // 비밀번호
-            address: '',    // 주소
-            phone_number: ''       // 휴대폰 번호
+        return { 
+            member: {
+                role: 'ROLE_USER',
+                name: '',       // 이름
+                email: '',      // 이메일
+                password: '',   // 비밀번호
+                address: '',    // 주소
+                phone_number: ''// 휴대폰 번호
+            }
         };
     },
+    computed: { ...mapStores(useMemberStore) },
     methods: {
-        async handleSignup() {
-            try {
-                // 회원가입 요청
-                const response = await axios.post('/api/api/v1/member/signup', {
-                    role: this.role,
-                    name: this.name,
-                    email: this.email,
-                    password: this.password,
-                    address: this.address,
-                    phone_number: this.phone_number
-                });
-                if (response.data.success) {
-                    alert('이메일 인증 요청이 전송되었습니다. 이메일 인증 후 회원가입이 완료됩니다.');
-                } else {
-                    alert('회원가입에 실패했습니다.');
-                }
-            } catch (error) {
-                console.error('회원가입 중 오류 발생:', error);
-                alert('회원가입 중 오류가 발생했습니다.');
-            }
+        handleSignup() {
+            const result = this.memberStore.signup(this.member);
+            if(result) { this.$router.push("/login")}
         }
     }
 }
