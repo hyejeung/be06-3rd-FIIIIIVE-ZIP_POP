@@ -77,7 +77,9 @@ badge&logo=pinia&logoColor=white"></a></a>
 <br>
 <br>
 
-
+## 🌱 화면설계서
+<br>
+<br>
 
 ## 🎥 프로젝트 시연
 
@@ -132,6 +134,7 @@ badge&logo=pinia&logoColor=white"></a></a>
 
 </details>
 
+<br>
 <details>
   <summary>🏢 기업</summary>
 
