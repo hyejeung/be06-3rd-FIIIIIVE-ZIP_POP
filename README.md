@@ -42,6 +42,11 @@
 <br>
 <br>
 
+## 🌱 화면설계서
+[**피그마 바로가기**](https://www.figma.com/design/Lsk0T0J6oH3GSzmzInUJPZ/%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C?node-id=0-1&t=lKoGim9PCwtw4xTA-0)
+<br>
+<br>
+
 ## 💻 기술 스택
 **[Frontend]**
 
@@ -74,11 +79,6 @@ badge&logo=pinia&logoColor=white"></a></a>
 
 <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=github&logoColor=white"/></a></a> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/></a></a>
 <br>
-<br>
-<br>
-
-## 🌱 화면설계서
-[**피그마 바로가기**](https://www.figma.com/design/Lsk0T0J6oH3GSzmzInUJPZ/%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C?node-id=0-1&t=lKoGim9PCwtw4xTA-0)
 <br>
 <br>
 
