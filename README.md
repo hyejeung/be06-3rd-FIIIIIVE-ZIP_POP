@@ -67,7 +67,7 @@ badge&logo=pinia&logoColor=white"></a></a>
 **[Cloud]**
 
 <img src="https://img.shields.io/badge/amazon s3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"></a></a>
-<img src="https://img.shields.io/badge/amazon ec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"></a></a>
+
 
 
 **[Collaborative Tool]**
