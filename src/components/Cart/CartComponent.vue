@@ -143,7 +143,7 @@
 <script>
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/api/v1/cart';
+const API_BASE_URL = '/api/api/v1/cart';
 
 export default {
   data() {

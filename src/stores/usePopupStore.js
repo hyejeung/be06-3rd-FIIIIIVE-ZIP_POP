@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
+import { backend } from "@/const";
 
 // 전역 저장소 생성
 export const usePopupStore = defineStore("popupstore", {
@@ -12,7 +13,7 @@ export const usePopupStore = defineStore("popupstore", {
     async register(formData) {
       try {
         let response = await axios.post(
-          "/api/api/v1" + "/register",
+          backend + "/popup-store/register",
           formData,
           {
             headers: {
@@ -29,7 +30,7 @@ export const usePopupStore = defineStore("popupstore", {
     },
     async searchAll() {
       try {
-        let response = await axios.get("/api/api/v1" + "/search-all?page=0&size=10");
+        let response = await axios.get(backend + "/popup-store/search-all?page=0&size=10");
         if (response.status === 200) {
           this.dataList = response.data.result;
           console.log(this.dataList);

@@ -12,7 +12,7 @@ export const usePostStore = defineStore("post", {
     actions: {
         async searchAll() {
             try {
-                let response = await axios.get(backend + "/search-all?page=0&size=10",);
+                let response = await axios.get(backend + "/post/search-all?page=0&size=10",);
                 if (response.status === 200) {
                     this.dataList = response.data.result;
                 } else {
