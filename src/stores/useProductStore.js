@@ -1,9 +1,8 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-axios.defaults.withCredentials = true;
+import { backend } from "@/const";
 
-const backend = "http://localhost:8080/api/v1/popup-goods";
 // 전역 저장소 생성
 export const useProductStore = defineStore("product", {
   state: () => ({ isLoggedIn: false }),
@@ -13,7 +12,7 @@ export const useProductStore = defineStore("product", {
   actions: {
     async register(storeIdx, formData) {
       try {
-        console.log(backend + "/register?storeIdx=" + storeIdx);
+        console.log(backend + "/popup-goods/register?storeIdx=" + storeIdx);
         let response = await axios.post(
           backend + "/register?storeIdx=" + storeIdx,
           formData,

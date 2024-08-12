@@ -125,22 +125,61 @@
                         <p data-v-a178adf6="" data-v-68c30ab0="">결제 후 실제 고객님의 휴대전화번호 대신 안심번호가 고수님에게 제공됩니다.</p>
                     </div>
                 </section>
-                <section data-v-a178adf6="" class="pay-button"><button data-v-a178adf6="" type="button"
-                        disabled="disabled" class="btn btn-primary btn-block disabled">결제하기</button></section><!---->
+                <section data-v-a178adf6="" class="pay-button">
+                    <button data-v-a178adf6="" type="button" :disabled="isPaymentDisabled" @click="payment"
+                        class="btn btn-primary btn-block">결제하기</button>
+                </section><!---->
             </article>
         </div>
     </div>
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
     name: "ProductPayComponent",
     data() {
-
+        return {
+            isPaymentDisabled: false
+        };
     },
     methods: {
+        payment() {
+            if (typeof window.IMP === 'undefined') {
+                console.error("Iamport script not loaded");
+                return;
+            }
 
+            const IMP = window.IMP;
+            IMP.init("imp68362066");
+
+            IMP.request_pay({
+                pg: "kakaopay.TC0ONETIME",
+                merchant_uid: "order_no_000" + new Date().getMilliseconds(),
+                name: "FIIIIIVE PAY",
+                amount: 50000,
+                buyer_email: "thdsk4311@sju.ac.kr",
+                buyer_name: "snk",
+                custom_data: { storeIdx: 1 }
+            }, (rsp) => {
+                console.log(rsp);
+
+                if (rsp.success) {
+                    axios.get(`http://localhost:8080/api/v1/orders/validation/registrationFee?impUid=${rsp.imp_uid}`)
+                        .then((response) => {
+                            console.log(response.data);
+                            if (response.data.success) {
+                                alert('Payment completed');
+                            } else {
+                                alert('Payment failed');
+                            }
+                        });
+                } else {
+                    alert("Payment failed");
+                }
+            });
+        }
     }
 }
 </script>
