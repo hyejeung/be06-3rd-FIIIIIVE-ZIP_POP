@@ -89,9 +89,13 @@ badge&logo=pinia&logoColor=white"></a></a>
   <summary>💁🏻 고객</summary>
 
   <details>
-    <summary>회원가입</summary>
-    일반 회원으로 새로운 계정을 생성합니다.
-  </details>
+  <summary>회원가입</summary>
+
+  ![고객회원가입 (2)](https://github.com/user-attachments/assets/a8191acc-2d51-4129-87ea-648b990994f2)
+
+  일반 회원으로 새로운 계정을 생성합니다.
+</details>
+
 
   <details>
     <summary>로그인</summary>
