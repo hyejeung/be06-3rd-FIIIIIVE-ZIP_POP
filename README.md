@@ -145,7 +145,12 @@ badge&logo=pinia&logoColor=white"></a></a>
 
   <details>
     <summary>회원가입</summary>
-    기업 회원으로 새로운 계정을 생성합니다.
+
+
+![기업회원가입 (2)](https://github.com/user-attachments/assets/60d019a2-c660-45a4-b5f4-471eca4792d1)
+
+
+   
   </details>
 
   <details>
@@ -170,7 +175,7 @@ badge&logo=pinia&logoColor=white"></a></a>
 
   <details>
     <summary>팝업관리</summary>
-    기업이 주최하는 팝업을 관리합니다.
+    기업이 주최하는 팝업을 등록합니다.
   </details>
 
 <details>
