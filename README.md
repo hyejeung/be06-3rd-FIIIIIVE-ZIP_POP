@@ -142,9 +142,13 @@ badge&logo=pinia&logoColor=white"></a></a>
 개인화된 페이지로 이동하여 여러 기능을 이용할 수 있습니다.
   </details>
 
-  <details>
-    <summary>포인트</summary>
-    계정에 적립된 포인트를 확인하고 사용할 수 있습니다.
+ <details>
+    <summary>결제</summary>
+    
+![굿즈구매](https://github.com/user-attachments/assets/df36d14a-f913-4d0e-a609-87e359ab98d1)
+
+  
+고객이 선택한 굿즈에 대한 결제를 처리합니다.
   </details>
 
   <details>
@@ -154,11 +158,11 @@ badge&logo=pinia&logoColor=white"></a></a>
      일반회원과 기업회원사이에 채팅을 할 수 있습니다.
   </details>
 
-<details>
-    <summary>결제</summary>
-     고객이 선택한 굿즈에 대한 결제를 처리합니다.
+ <details>
+    <summary>포인트</summary>
+    계정에 적립된 포인트를 확인하고 사용할 수 있습니다.
   </details>
-
+  
 </details>
 
 <br>
