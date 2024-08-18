@@ -132,14 +132,14 @@ badge&logo=pinia&logoColor=white"></a></a>
 상품의 수량을 조정하거나 삭제할 수 있으며, 상품의 가격과 총 금액을 확인할 수 있습니다.
 </details>
 
-  <details>
-    <summary>회원정보</summary>
-    계정의 개인 정보를 확인하고 수정합니다.
-  </details>
+  
 
-  <details>
+<details>
     <summary>마이페이지</summary>
-    개인화된 페이지로 이동하여 여러 기능을 이용할 수 있습니다.
+
+![마이페이지](https://github.com/user-attachments/assets/f23c9feb-8279-44c9-b945-ab010bdedeaa)
+
+개인화된 페이지로 이동하여 여러 기능을 이용할 수 있습니다.
   </details>
 
   <details>
@@ -148,8 +148,10 @@ badge&logo=pinia&logoColor=white"></a></a>
   </details>
 
   <details>
-    <summary>예매내역</summary>
-     팝업 예매 기록을 확인합니다.
+    <summary>채팅</summary>
+
+  ![채팅](https://github.com/user-attachments/assets/7a4ec0dc-9a9e-4898-a491-6aa2120c4243)
+     일반회원과 기업회원사이에 채팅을 할 수 있습니다.
   </details>
 
 <details>
