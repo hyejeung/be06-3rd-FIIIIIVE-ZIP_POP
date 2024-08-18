@@ -90,8 +90,8 @@ badge&logo=pinia&logoColor=white"></a></a>
 
   <details>
   <summary>회원가입</summary>
-
-  ![고객회원가입 (2)](https://github.com/user-attachments/assets/a8191acc-2d51-4129-87ea-648b990994f2)
+	  
+![고객회원가입 (2)](https://github.com/user-attachments/assets/a8191acc-2d51-4129-87ea-648b990994f2)
 
   일반 회원으로 새로운 계정을 생성합니다.
 </details>
@@ -99,13 +99,27 @@ badge&logo=pinia&logoColor=white"></a></a>
 
   <details>
     <summary>로그인</summary>
-    기존 계정으로 로그인합니다.
-  </details>
+
+![일반회원로그인_1](https://github.com/user-attachments/assets/bb7cc7a8-d2ac-48fe-9456-f86ef2b21136)
+
+일반 회원 계정으로 로그인합니다.
+</details>
 
   <details>
     <summary>로그아웃</summary>
-    현재 로그인된 세션을 종료합니다.
-  </details>
+
+![일반회원로그아웃](https://github.com/user-attachments/assets/fc307bb4-aadd-4404-944a-db89fbdc44f2)
+
+현재 로그인된 세션을 종료하고 쿠키를 삭제합니다.
+</details>
+
+  <details>
+    <summary>찜한 팝업</summary>
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/c350d15b-b0a4-4999-89b0-35734ad35b9a)
+
+사용자가 관심 있는 팝업을 조회하고 삭제할 수 있습니다.
+</details>
 
   <details>
     <summary>회원정보</summary>
@@ -115,11 +129,6 @@ badge&logo=pinia&logoColor=white"></a></a>
   <details>
     <summary>마이페이지</summary>
     개인화된 페이지로 이동하여 여러 기능을 이용할 수 있습니다.
-  </details>
-
-  <details>
-    <summary>찜한 팝업</summary>
-    사용자가 관심 있는 팝업을 조회하고 삭제할 수 있습니다.
   </details>
 
   <details>
@@ -145,24 +154,33 @@ badge&logo=pinia&logoColor=white"></a></a>
 
   <details>
     <summary>회원가입</summary>
-
-
+	  
 ![기업회원가입 (2)](https://github.com/user-attachments/assets/60d019a2-c660-45a4-b5f4-471eca4792d1)
-
+기업 회원으로 새로운 계정을 생성합니다.
 
    
   </details>
 
   <details>
     <summary>로그인</summary>
-    기업 계정으로 로그인합니다.
-  </details>
+
+![기업회원로그인_1](https://github.com/user-attachments/assets/728ff701-818e-4b81-917a-662a18212019)
+기업 회원 계정으로 로그인합니다.
+</details>
 
   <details>
     <summary>로그아웃</summary>
     현재 로그인된 세션을 종료합니다.
   </details>
 
+  <details>
+    <summary>팝업관리</summary>
+
+![ezgif com-video-to-gif-converter (3)](https://github.com/user-attachments/assets/a6b0f1ec-9509-4f34-8beb-b47284106679)
+
+기업이 진행하는 팝업을 등록합니다.
+</details>
+  
   <details>
     <summary>회원정보</summary>
     기업 계정의 정보를 확인하고 수정합니다.
@@ -171,11 +189,6 @@ badge&logo=pinia&logoColor=white"></a></a>
   <details>
     <summary>굿즈관리</summary>
     기업이 판매하는 굿즈를 관리합니다.
-  </details>
-
-  <details>
-    <summary>팝업관리</summary>
-    기업이 주최하는 팝업을 등록합니다.
   </details>
 
 <details>
