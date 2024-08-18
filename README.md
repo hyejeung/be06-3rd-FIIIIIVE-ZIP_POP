@@ -121,6 +121,17 @@ badge&logo=pinia&logoColor=white"></a></a>
 사용자가 관심 있는 팝업을 조회하고 삭제할 수 있습니다.
 </details>
 
+<details>
+    <summary>장바구니</summary>
+
+![장바구니 (1)](https://github.com/user-attachments/assets/0a1d3b8a-82a7-42fd-a943-ebb33f9541fe)
+
+
+사용자가 구매를 원하는 굿즈들을 담아두는 공간으로, 나중에 한꺼번에 결제할 수 있습니다.
+<br>
+상품의 수량을 조정하거나 삭제할 수 있으며, 상품의 가격과 총 금액을 확인할 수 있습니다.
+</details>
+
   <details>
     <summary>회원정보</summary>
     계정의 개인 정보를 확인하고 수정합니다.
