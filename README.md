@@ -158,10 +158,7 @@ badge&logo=pinia&logoColor=white"></a></a>
      일반회원과 기업회원사이에 채팅을 할 수 있습니다.
   </details>
 
- <details>
-    <summary>포인트</summary>
-    계정에 적립된 포인트를 확인하고 사용할 수 있습니다.
-  </details>
+
   
 </details>
 
@@ -185,10 +182,6 @@ badge&logo=pinia&logoColor=white"></a></a>
 기업 회원 계정으로 로그인합니다.
 </details>
 
-  <details>
-    <summary>로그아웃</summary>
-    현재 로그인된 세션을 종료합니다.
-  </details>
 
   <details>
     <summary>팝업관리</summary>
@@ -198,29 +191,11 @@ badge&logo=pinia&logoColor=white"></a></a>
 기업이 진행하는 팝업을 등록합니다.
 </details>
   
-  <details>
-    <summary>회원정보</summary>
-    기업 계정의 정보를 확인하고 수정합니다.
-  </details>
 
-  <details>
-    <summary>굿즈관리</summary>
-    기업이 판매하는 굿즈를 관리합니다.
-  </details>
-
-<details>
-    <summary>결제</summary>
-    플랫폼 사용에 따른 수수료 결제를 진행합니다.
-  </details>
-
-  <details>
-    <summary>수수료결제 내역</summary>
-    수수료 결제 기록을 확인합니다.
-  </details>
 
 </details>
 <br>
 
 ## 🗄️ 백엔드
-[**백엔드 GitHub 바로가기**](https://github.com/beyond-sw-camp/be06-2nd-FIIIIIVE-ZIP_POP)
+[**백엔드 GitHub 바로가기**](https://github.com/hyejeung/be06-2nd-FIIIIIVE-ZIP_POP)
 
