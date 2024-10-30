@@ -37,8 +37,7 @@
 <br>
 <br>
 
-## ➰ ZIPPOP 바로가기
-[**http://www.zippop.kro.kr**](http://www.zippop.kro.kr/)
+
 <br>
 <br>
 
